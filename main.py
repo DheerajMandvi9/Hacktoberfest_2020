@@ -6,7 +6,7 @@ from myprint import print_center, input_center
 from database import get_database
 import colorama
 from colorama import Fore,Back,Style
-colorama.init()
+colorama.init(autoreset=True)
 if __name__ == '__main__':
     database, cursor = get_database()
     if database is None:
@@ -14,13 +14,13 @@ if __name__ == '__main__':
         sys.exit(1)
     while True:
         print()
-        print_center(Fore.BLUE +"==============================")
-        print_center("============Library===========")
-        print_center("==============================")
-        print_center(Fore.GREEN+"1. Manage Members")
-        print_center("2. Issue/Return Register")
-        print_center("3. Manage Books")
-        print_center("0. Exit")
+        print_center(Fore.RED+"==============================")
+        print_center(Fore.RED+"============Library===========")
+        print_center(Fore.RED+"==============================")
+        print_center(Fore.YELLOW+"1. Manage Members")
+        print_center(Fore.YELLOW+"2. Issue/Return Register")
+        print_center(Fore.YELLOW+"3. Manage Books")
+        print_center(Fore.YELLOW+"0. Exit")
         print()
         choice = int(input_center("Enter your choice: "))
         if choice == 2:
