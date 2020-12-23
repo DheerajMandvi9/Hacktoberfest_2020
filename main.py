@@ -4,6 +4,9 @@ from issue_returns import issue_return_menu
 from members import member_menu
 from myprint import print_center, input_center
 from database import get_database
+import colorama
+from colorama import Fore,Back,Style
+colorama.init()
 if __name__ == '__main__':
     database, cursor = get_database()
     if database is None:
@@ -11,10 +14,10 @@ if __name__ == '__main__':
         sys.exit(1)
     while True:
         print()
-        print_center("==============================")
+        print_center(Fore.BLUE +"==============================")
         print_center("============Library===========")
         print_center("==============================")
-        print_center("1. Manage Members")
+        print_center(Fore.GREEN+"1. Manage Members")
         print_center("2. Issue/Return Register")
         print_center("3. Manage Books")
         print_center("0. Exit")
