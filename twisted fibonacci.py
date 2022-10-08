@@ -1,21 +1,15 @@
 
-
-
-
-
-
-
-def isprime(num):
-    for i in range(2,num):
-       if (num % i) == 0:
+def isprime(number):
+    for i in range(2,number):
+       if (number % i) == 0:
            return False
        else:
            return True
-n = int(input())
+num = int(input())
 a=0
 b=1
 list = []
-for i in range(0,n):
+for i in range(0,num):
     c=a+b
     list.append(c)
     a=b
